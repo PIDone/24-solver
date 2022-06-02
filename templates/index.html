@@ -16,5 +16,25 @@
                 <p>Answer: {{ answer }}</p>
             </div>
         </form>
+        <script>
+            const height = Math.max(window.innerHeight,
+                        document.getElementsByTagName("html")[0].clientHeight,
+                        document.getElementsByTagName("body")[0].clientHeight,
+                        screen.availHeight);
+            const width = Math.max(document.body.scrollHeight,
+                        document.documentElement.scrollHeight,
+                        document.body.offsetHeight,
+                        document.documentElement.offsetHeight,
+                        document.documentElement.clientHeight);
+
+            console.log(width, height)
+            
+            const max = Math.max(height, width)
+            
+            const inputs = document.getElementsByTagName("input");
+            for (element of inputs) {
+                element.setAttribute("style", `width: ${max/4}px;`);
+            }
+        </script>
     </body>
 </html>
