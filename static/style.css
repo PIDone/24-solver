@@ -1,3 +1,6 @@
+input {
+    text-align: center;
+}
 div {
     border: solid;
     position: absolute;
@@ -13,4 +16,11 @@ div {
 }
 button {
     width: 100%;
+}
+
+* {
+    font-size: 105%;
+}
+p {
+    font-size: 110%;
 }
