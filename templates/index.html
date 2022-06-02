@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hi</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    </head>
+    <body>
+        <form action="{{ url_for("process")}}" method="post">
+            <div>
+                <input type="number" autocomplete="off" name="number1" onkeypress="return event.charCode>=48 && event.charCode<=57" require><br>
+                <input type="number" autocomplete="off" name="number2" onkeypress="return event.charCode>=48 && event.charCode<=57" require><br>
+                <input type="number" autocomplete="off" name="number3" onkeypress="return event.charCode>=48 && event.charCode<=57" require><br>
+                <input type="number" autocomplete="off" name="number4" onkeypress="return event.charCode>=48 && event.charCode<=57" require><br>
+                <br>
+                <button type="submit">Solve</button>
+                <p>Answer: {{ answer }}</p>
+            </div>
+        </form>
+    </body>
+</html>
