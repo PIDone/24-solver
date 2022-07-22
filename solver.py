@@ -104,7 +104,7 @@ def solve(numbers):
 	solutions = []
 	for expression in possibilities:
 		try:
-			if eval(expression) == 24:
+			if eval(expression) <= 24 + 1e-14 and eval(expression) >= 24 - 1e-14:
 				solutions.append(expression)
 		except:
 			continue
@@ -112,7 +112,7 @@ def solve(numbers):
 	if len(solutions) == 0:
 		return "No solution"
 	
-	best = "							  "
+	best = solutions[0]
 	for solution in solutions:
 		if len(solution) < len(best):
 			best = solution

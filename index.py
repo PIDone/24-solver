@@ -6,7 +6,7 @@ aaaaaa = "asdfg"
 app = Flask(__name__)
 app.static_folder = "static"  
  
-@app.route('/', methods =["GET", "POST"])
+@app.route("/", methods =["GET", "POST"])
 def process():
 	if request.method == "POST":
 		numbers = []
